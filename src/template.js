@@ -1,3 +1,49 @@
+const generateManager = managerArr => {
+  return `
+  ${managerArr
+    .map(({name,employId,email,officeNumber}) => {
+      return `
+      <div>${name}</div>
+      <div>${employId}</div>
+      <div>${email}</div>
+      <div>${officeNumber}</div>
+      `;
+    })
+  }`;
+}
+
+const generateEngineers = engineerArr => {
+  return`
+  ${engineerArr
+  .map(({name,employId,email,gitHub}) => {
+    return `
+    <div>${name}</div>
+    <div>${employId}</div>
+    <div>${email}</div>
+    <div>${gitHub}</div>
+    `;
+  })
+  }
+  `;
+}
+
+const generateInterns = internArr => {
+  return`
+  ${internArr
+ .map(({name,employId,email,school}) => {
+   return `
+   <div>${name}</div>
+   <div>${employId}</div>
+   <div>${email}</div>
+   <div>${school}</div>
+   `;
+ })
+  }
+  `;
+}
+
+
+
 module.exports = (managerArr,engineerArr,internArr) => {
     return` 
     <!DOCTYPE html>
@@ -13,7 +59,9 @@ module.exports = (managerArr,engineerArr,internArr) => {
     </head>
      <body>
       <main> 
-   /*functions go here*/
+   ${console.log(generateManager(managerArr))}
+   ${console.log(generateEngineers(engineerArr))}
+   ${console.log(generateInterns(internArr))}
       </main>
      </body>
     </html>`;
