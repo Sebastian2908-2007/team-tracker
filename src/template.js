@@ -1,4 +1,4 @@
-module.exports = htmlTemplate => {
+module.exports = (managerArr,engineerArr,internArr) => {
     return` 
     <!DOCTYPE html>
     <html lang="en">
