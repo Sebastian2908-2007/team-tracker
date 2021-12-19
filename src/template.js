@@ -59,9 +59,9 @@ module.exports = (managerArr,engineerArr,internArr) => {
     </head>
      <body>
       <main> 
-   ${console.log(generateManager(managerArr))}
-   ${console.log(generateEngineers(engineerArr))}
-   ${console.log(generateInterns(internArr))}
+   ${generateManager(managerArr)}
+   ${generateEngineers(engineerArr)}
+   ${generateInterns(internArr)}
       </main>
      </body>
     </html>`;
