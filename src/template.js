@@ -3,10 +3,15 @@ const generateManager = managerArr => {
   ${managerArr
     .map(({name,employId,email,officeNumber}) => {
       return `
-      <div>${name}</div>
-      <div>${employId}</div>
-      <div>${email}</div>
-      <div>${officeNumber}</div>
+      <pre>
+      Manager:${name}
+
+      Employee Id:${employId}
+
+      email:${email}
+
+      Office#:${officeNumber}
+      </pre>
       `;
     })
   }`;
@@ -17,10 +22,15 @@ const generateEngineers = engineerArr => {
   ${engineerArr
   .map(({name,employId,email,gitHub}) => {
     return `
-    <div>${name}</div>
-    <div>${employId}</div>
-    <div>${email}</div>
-    <div>${gitHub}</div>
+    <pre>
+    Engineer:${name}
+
+    Employee Id:${employId}
+
+    email:${email}
+
+    Github Acct:${gitHub}
+    </pre>
     `;
   })
   }
@@ -32,10 +42,15 @@ const generateInterns = internArr => {
   ${internArr
  .map(({name,employId,email,school}) => {
    return `
-   <div>${name}</div>
-   <div>${employId}</div>
-   <div>${email}</div>
-   <div>${school}</div>
+   <pre>
+   Intern:${name}
+
+   Employee Id${employId}
+
+   email:${email}
+   
+   School:${school}
+   </pre>
    `;
  })
   }
@@ -59,9 +74,19 @@ module.exports = (managerArr,engineerArr,internArr) => {
     </head>
      <body>
       <main> 
+      <section class="main-section">
+      <div class="employee-section">
    ${generateManager(managerArr)}
+      </div>
+
+      <div class="employee-section">
    ${generateEngineers(engineerArr)}
-   ${generateInterns(internArr)}
+      </div>
+
+      <div class="employee-section">
+   ${generateInterns(internArr)} 
+      </div>
+      </section>
       </main>
      </body>
     </html>`;
