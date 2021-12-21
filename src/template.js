@@ -4,13 +4,22 @@ const generateManager = managerArr => {
     .map(({name,employId,email,officeNumber}) => {
       return `
       <pre>
-      Manager:${name}
-
-      Employee Id:${employId}
-
-      email:${email}
-
-      Office#:${officeNumber}
+      <strong>
+      Manager: ${name}
+      </strong>
+      
+      <strong>
+      Employee Id: ${employId}
+      </strong>
+      
+      <strong>
+      Contact:  <a class="email-link" href="mailto:${email}">${name}</a>
+      </strong>
+  
+      <strong>
+      Office#: ${officeNumber}
+      </strong>
+      
       </pre>
       `;
     })
@@ -23,13 +32,22 @@ const generateEngineers = engineerArr => {
   .map(({name,employId,email,gitHub}) => {
     return `
     <pre>
-    Engineer:${name}
+    <strong>
+    Engineer: ${name}
+    </strong>
+    
+    <strong>
+    Employee Id: ${employId}
+    </strong>
+    
+    <strong>
+    Contact:  <a class="email-link" href="mailto:${email}">${name}</a>
+    </strong>
+  
+    <strong>
+    Github Acct: <a href="https://github.com/${gitHub}" target="blank" class="btn mt-auto"><i class="fab fa-github mr-2"></i>View</a>
+    </strong>
 
-    Employee Id:${employId}
-
-    email:${email}
-
-    Github Acct:${gitHub}
     </pre>
     `;
   })
@@ -43,13 +61,22 @@ const generateInterns = internArr => {
  .map(({name,employId,email,school}) => {
    return `
    <pre>
-   Intern:${name}
-
-   Employee Id${employId}
-
-   email:${email}
+   <strong>
+   Intern: ${name}
+   </strong>
    
-   School:${school}
+   <strong>
+   Employee Id: ${employId}
+   </strong>
+   
+   <strong>
+   Contact: <a class="email-link" href="mailto:${email}">${name}</a>
+   </strong>
+   
+   <strong>
+   School: ${school}
+   </strong>
+   
    </pre>
    `;
  })
@@ -75,15 +102,15 @@ module.exports = (managerArr,engineerArr,internArr) => {
      <body>
       <main> 
       <section class="main-section">
-      <div class="employee-section">
+      <div class="manager">
    ${generateManager(managerArr)}
       </div>
 
-      <div class="employee-section">
+      <div class="engineer">
    ${generateEngineers(engineerArr)}
       </div>
 
-      <div class="employee-section">
+      <div class="intern">
    ${generateInterns(internArr)} 
       </div>
       </section>
