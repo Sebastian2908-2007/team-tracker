@@ -1,0 +1,28 @@
+{
+  "name": "team-tracker",
+  "version": "1.0.0",
+  "description": "An app to track employee stats",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sebastian2908-2007/team-tracker.git"
+  },
+  "author": "sebastian bowen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sebastian2908-2007/team-tracker/issues"
+  },
+  "homepage": "https://github.com/Sebastian2908-2007/team-tracker#readme",
+  "devDependencies": {
+    "jest": "^27.4.5"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
