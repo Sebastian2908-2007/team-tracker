@@ -8,7 +8,7 @@
  https://github.com/Sebastian2908-2007/team-tracker
  ## Description
 
-This is a node.js  project for adding info on team members from the command line
+This is a node.js  project for adding info on team members from the command line ,so you can generate a webpage.
     
  ## Table Of Contents
 * [Description](#description)
